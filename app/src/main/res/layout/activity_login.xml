@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/constraint"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.atfalnaa.atfalna.login" android:background="@drawable/background"
+    >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/logosplash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/group_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.4"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/UserName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintVertical_bias="0.2">
+
+            <EditText
+                android:id="@+id/txt_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="@drawable/background_edittext"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:paddingEnd="15dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/White"
+                android:textColorHint="@color/light_gray"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/logo_email"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:tint="@android:color/white"
+                android:layout_weight="1"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/user_email" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/light_gray"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/UserName"
+            >
+
+            <EditText
+                android:id="@+id/txt_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="@drawable/background_edittext"
+                android:hint="@string/pass"
+                android:inputType="textPassword"
+                android:paddingEnd="15dp"
+                android:textColor="@color/White"
+                android:textColorHint="@color/light_gray"
+                android:gravity="right|center"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/logo_password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/password_icon"
+                />
+        </LinearLayout>
+
+        <Button
+            android:onClick="Login"
+            android:id="@+id/btn_login"
+            android:text="تسجيل"
+            android:textColor="@color/White"
+            android:textSize="23sp"
+            android:background="@drawable/background_edittext"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password"
+            tools:ignore="OnClick" />
+
+        <Switch
+            android:id="@+id/remeber_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:switchPadding="10dp"
+            android:text="تذكرنى"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/group_login"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        >
+
+       <!-- <LinearLayout
+            android:id="@+id/conect_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:src="@drawable/line"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:text="تواصل معانا"
+                android:layout_width="0dp"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/White"
+                />
+
+            <ImageView
+                android:src="@drawable/line"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                />
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" >
+            <TextView
+
+                android:id="@+id/text_register"
+                android:text="هنا ؟"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/White"
+                android:gravity="right"
+                tools:ignore="OnClick,RtlHardcoded"
+                android:onClick="Registeration"
+
+                />
+
+            <TextView
+                android:text="لأنشاء حساب جديد"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/White"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

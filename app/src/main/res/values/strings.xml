@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Atfalna</string>
+    <string name="logo_name">Atfalna2018</string>
+    <string name="todo">TODO</string>
+    <string name="email">البريد الالكترونى</string>
+    <string name="pass">كلمه المرور</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="re_pass">اعاده كلمه المرور</string>
+    <string name="phone">رقم التليفون</string>
+    <string name="male">ذكر</string>
+    <string name="female">انثى</string>
+    <string name="register_Buton">تسجيل</string>
+</resources>
